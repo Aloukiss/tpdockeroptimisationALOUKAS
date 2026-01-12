@@ -1,11 +1,21 @@
-FROM node:latest
+# ---------- BUILD STAGE ----------
+FROM node:18-alpine AS build
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 COPY . .
+RUN npm run build || echo "no build step"
+
+# ---------- RUNTIME STAGE ----------
+FROM node:18-alpine
+
+WORKDIR /app
+ENV NODE_ENV=production
+
+COPY --from=build /app .
 
 EXPOSE 3000
 CMD ["node", "server.js"]
