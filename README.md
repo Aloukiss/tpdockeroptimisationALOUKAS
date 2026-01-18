@@ -1,5 +1,4 @@
-\# TP – Optimisation d’une image Docker Node.js
-Optimisation d’images Docker à partir d’une application Node.js existante.
+\# TP – Optimisation d’images Docker à partir d’une application Node.js existante.
 
 \## Application
 
