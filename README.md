@@ -1,18 +1,5 @@
 \# TP – Optimisation d’une image Docker Node.js
-
-
-
-\## Objectif
-
-Ce TP a pour objectif de se familiariser avec Docker et d’appliquer des bonnes pratiques
-
-d’optimisation d’images Docker à partir d’une application Node.js existante.
-
-
-
----
-
-
+Optimisation d’images Docker à partir d’une application Node.js existante.
 
 \## Application
 
@@ -21,10 +8,6 @@ d’optimisation d’images Docker à partir d’une application Node.js existan
 \- Dépendances gérées avec npm
 
 \- Exposition du port 3000
-
-
-
----
 
 
 
@@ -51,11 +34,6 @@ Une première image Docker a été construite à partir du Dockerfile initial.
 \- `tp-node:baseline` → \*\*1.2 GB\*\*
 
 
-
----
-
-
-
 \## Étape 2 – Suppression de `node\_modules`
 
 Le Dockerfile a été modifié pour ne plus copier `node\_modules`.
@@ -67,11 +45,6 @@ Les dépendances sont installées directement dans l’image via `npm install`.
 \*\*Taille :\*\*
 
 \- `tp-node:no-node-modules` → \*\*1.16 GB\*\*
-
-
-
----
-
 
 
 \## Étape 3 – Optimisation avancée
@@ -93,11 +66,6 @@ Optimisation via :
 \- `tp-node:optimized` → \*\*138 MB\*\*
 
 
-
----
-
-
-
 \## Comparaison des tailles
 
 
@@ -114,15 +82,11 @@ Optimisation via :
 
 
 
----
-
-
-
 \## Conclusion
 
 L’utilisation des bonnes pratiques Docker permet de réduire fortement la taille des images
 
-et d’améliorer la performance, la sécurité et la maintenabilité.
+et d’améliorer la performance.
 
 
 
